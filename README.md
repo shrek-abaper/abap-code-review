@@ -8,7 +8,7 @@ An AI agent skill for SAP ABAP pre-release code review. Performs a comprehensive
 
 ## Overview
 
-`abap-code-review` is an OpenCode skill that guides an AI agent through a structured, repeatable ABAP code review workflow. It is designed to catch security vulnerabilities, authorization gaps, performance risks, and code quality issues before a transport is promoted to production.
+`abap-code-review` is an AI agent skill that guides any AI agent through a structured, repeatable ABAP code review workflow. It is designed to catch security vulnerabilities, authorization gaps, performance risks, and code quality issues before a transport is promoted to production.
 
 ### Why use it?
 
@@ -37,10 +37,10 @@ An AI agent skill for SAP ABAP pre-release code review. Performs a comprehensive
 
 ## How to Use
 
-### Trigger the skill
+### Invoke the agent
 
 ```
-Using the abap-code-review skill, review program [PROGRAM_NAME] for release.
+Review program [PROGRAM_NAME] for release.
 Transport: [DEVKXXXXXX], Change description: [one-line business purpose].
 Save the report to the reports/ directory.
 ```
@@ -103,7 +103,7 @@ MEDIUM / LOW / INFO findings only      → GO
 
 ```
 abap-code-review/
-├── SKILL.md                          ← Agent instructions (loaded by OpenCode)
+├── SKILL.md                          ← Agent instructions (SKILL definition; loaded by the agent host)
 ├── README.md                         ← This file (English)
 ├── README.zh.md                      ← Chinese version
 └── references/

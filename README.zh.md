@@ -8,7 +8,7 @@
 
 ## 简介
 
-`abap-code-review` 是一个 OpenCode Skill，引导 AI Agent 按照结构化、可重复的工作流对 ABAP 代码进行审查。它的目标是在 Transport 上移到生产系统之前，发现安全漏洞、权限缺失、性能隐患和代码质量问题。
+`abap-code-review` 是一个 AI Agent Skill，引导 AI Agent 按照结构化、可重复的工作流对 ABAP 代码进行审查。它的目标是在 Transport 上移到生产系统之前，发现安全漏洞、权限缺失、性能隐患和代码质量问题。
 
 ### 为什么使用它？
 
@@ -37,10 +37,10 @@
 
 ## 使用方法
 
-### 触发 Skill
+### 发起审查
 
 ```
-参考 abap-code-review SKILL，对程序 [PROGRAM_NAME] 进行安全与质量评估，
+对程序 [PROGRAM_NAME] 进行安全与质量评估，
 Transport [DEVKXXXXXX]，变更说明：[一句话业务目的]。
 报告保存至 reports/ 目录。
 ```
@@ -103,7 +103,7 @@ Agent 会将 Markdown 报告保存至你指定的 `reports/` 目录：
 
 ```
 abap-code-review/
-├── SKILL.md                          ← Agent 指令文件（由 OpenCode 加载）
+├── SKILL.md                          ← Agent 指令文件（SKILL 定义；由 Agent 运行时加载）
 ├── README.md                         ← 英文说明文档
 ├── README.zh.md                      ← 本文件（中文）
 └── references/
